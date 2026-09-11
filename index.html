@@ -1,174 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARBOROPS | AI Strategy & Growth Consultancy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glow-button { transition: 0.3s; box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); }
-        .glow-button:hover { box-shadow: 0 0 25px rgba(79, 172, 254, 0.8); transform: translateY(-2px); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>ArborOps | AI Consultancy for Growing Businesses</title>
+  <meta name="description" content="ArborOps helps SMEs harness AI to save time, reduce costs, and grow revenue — without over-engineering or vendor lock-in. Simple systems that last." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.arborops.tech" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ArborOps | AI Consultancy for Growing Businesses" />
+  <meta property="og:description" content="We don't automate everything. Just the things that matter." />
+  <meta property="og:url" content="https://www.arborops.tech" />
+  <meta property="og:type" content="website" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="overflow-x-hidden">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tighter gradient-text">ARBOROPS</div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#about" class="hover:text-blue-400 transition">About</a>
-            <a href="#services" class="hover:text-blue-400 transition">Services</a>
-            <a href="#testimonials" class="hover:text-blue-400 transition">Testimonials</a>
-            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+  <!-- ══════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">ArborOps</a>
+
+      <div class="nav-links" role="list">
+        <a href="#philosophy" role="listitem">Philosophy</a>
+        <a href="#solutions" role="listitem">Solutions</a>
+        <a href="#process" role="listitem">Process</a>
+        <a href="#contact" role="listitem">Contact</a>
+      </div>
+
+      <a href="#contact" class="nav-cta" id="nav-book-call">Book a Discovery Call</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="menu">
+    <a href="#philosophy" role="menuitem">Philosophy</a>
+    <a href="#solutions" role="menuitem">Solutions</a>
+    <a href="#process" role="menuitem">Process</a>
+    <a href="#contact" role="menuitem">Book a Discovery Call</a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-eyebrow reveal">
+          <span class="hero-eyebrow-line" aria-hidden="true"></span>
+          <span class="hero-eyebrow-text">AI Consultancy · SME Focus</span>
         </div>
-        <a href="#contact" class="bg-blue-600 px-5 py-2 rounded-full text-sm font-semibold glow-button">Book a Call</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="absolute inset-0 z-0 opacity-20" style="background-image: radial-gradient(#4facfe 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight z-10">
-            Grow Revenue <br><span class="gradient-text">Through AI Intelligence.</span>
+        <h1 class="hero-title reveal reveal-delay-1" id="hero-heading">
+          We don't automate<br>
+          everything. Just<br>
+          <em>the things that matter.</em>
         </h1>
-        <p class="text-gray-400 max-w-2xl text-lg md:text-xl mb-10 z-10">
-            Arborops is a elite consultancy of two founders helping businesses automate, optimize, and scale using cutting-edge AI and technology.
+        <p class="hero-sub reveal reveal-delay-2">
+          ArborOps identifies where AI creates real, measurable impact in your business — 
+          then builds it simply, so it runs without us.
         </p>
-        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 z-10">
-            <a href="#contact" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">Get Started</a>
-            <a href="#services" class="glass px-8 py-4 rounded-full font-bold hover:bg-white/10 transition">View Our Focus</a>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#contact" class="btn-primary" id="hero-cta-primary">Book a Discovery Call</a>
+          <a href="#solutions" class="btn-ghost" id="hero-cta-secondary">
+            See our solutions
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-text">Scroll</span>
+      <span class="hero-scroll-line"></span>
+    </div>
+  </section>
 
-    <!-- Founders Section -->
-    <section id="about" class="py-24 px-6 md:px-24">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Two Minds. One Mission.</h2>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    At Arborops, we don't believe in bloated agencies. We are a lean team of two expert consultants who work directly with your business to strip away inefficiency and inject AI-driven growth.
-                </p>
-                <div class="flex items-center space-x-4">
-                    <div class="h-1 w-12 bg-blue-500"></div>
-                    <span class="uppercase tracking-widest text-xs font-semibold text-blue-500">Multifold Growth Guaranteed</span>
-                </div>
+  <!-- ══════════════════════════════════
+       PHILOSOPHY
+  ══════════════════════════════════ -->
+  <section id="philosophy" aria-labelledby="philosophy-heading">
+    <div class="container">
+      <h2 id="philosophy-heading" class="sr-only">Our Philosophy</h2>
+      <div class="philosophy-grid">
+        <div class="philosophy-item reveal">
+          <div class="philosophy-num" aria-hidden="true">01</div>
+          <div class="philosophy-title">No Over-Engineering</div>
+          <p class="philosophy-text">
+            We build exactly what your business needs — nothing more. 
+            Complexity is the enemy of adoption. Simple systems get used.
+          </p>
+        </div>
+        <div class="philosophy-item reveal reveal-delay-1">
+          <div class="philosophy-num" aria-hidden="true">02</div>
+          <div class="philosophy-title">Systems That Outlast Us</div>
+          <p class="philosophy-text">
+            Once we deliver, you own it — fully. We build for longevity, 
+            not dependency. No retainers, no lock-in, no manufactured urgency.
+          </p>
+        </div>
+        <div class="philosophy-item reveal reveal-delay-2">
+          <div class="philosophy-num" aria-hidden="true">03</div>
+          <div class="philosophy-title">ROI Before Everything</div>
+          <p class="philosophy-text">
+            In week one, we audit your business and quantify the opportunity — 
+            time saved, revenue recovered, costs eliminated — before we write a line of code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SOLUTIONS
+  ══════════════════════════════════ -->
+  <section id="solutions" aria-labelledby="solutions-heading">
+    <div class="container">
+      <div class="section-eyebrow reveal">
+        <span class="section-eyebrow-line" aria-hidden="true"></span>
+        <span class="section-eyebrow-text">Solutions We Build</span>
+      </div>
+      <h2 class="section-title reveal" id="solutions-heading">
+        Proven AI systems<br>for your industry.
+      </h2>
+      <p class="section-sub reveal">
+        Real problems. Real solutions. Every system below addresses a specific bottleneck 
+        we've seen SMEs lose money to — every single day.
+      </p>
+
+      <div class="solutions-grid">
+
+        <!-- Card 1 -->
+        <article class="solution-card reveal" id="solution-whatsapp" aria-labelledby="solution-1-title">
+          <span class="solution-tag">Lead Capture</span>
+          <h3 class="solution-title" id="solution-1-title">
+            24/7 WhatsApp Lead Qualification &amp; Booking Agent
+          </h3>
+          <div class="solution-section-label">The Bottleneck</div>
+          <p class="solution-body">
+            Potential clients enquire after hours, on weekends, or during your busiest periods. 
+            No reply means a lost lead — often to a competitor who responds first.
+          </p>
+          <div class="solution-section-label">The AI Solution</div>
+          <p class="solution-body">
+            An intelligent WhatsApp agent that understands natural language — including Hinglish and Kanglish — 
+            answers your FAQs, qualifies leads based on budget and intent, and books appointments 
+            directly into your calendar. No human needed.
+          </p>
+          <div class="solution-impact" aria-label="Business impact">
+            <span class="solution-impact-icon" aria-hidden="true">◆</span>
+            <span class="solution-impact-text">
+              Stops leads from falling through the cracks. Measurable impact on top-line revenue from week one.
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="solution-card reveal reveal-delay-1" id="solution-reputation" aria-labelledby="solution-2-title">
+          <span class="solution-tag">Brand Protection</span>
+          <h3 class="solution-title" id="solution-2-title">
+            Omnichannel Reputation &amp; Review Manager
+          </h3>
+          <div class="solution-section-label">The Bottleneck</div>
+          <p class="solution-body">
+            Replying to Google, Zomato, or Trustpilot reviews takes time you don't have. 
+            Ignoring negative reviews costs you customers. Ignoring positive ones costs you loyalty.
+          </p>
+          <div class="solution-section-label">The AI Solution</div>
+          <p class="solution-body">
+            A sentiment analysis dashboard that aggregates reviews across every platform, 
+            instantly alerts you to negative reviews via WhatsApp, and auto-drafts empathetic, 
+            context-aware responses — ready for your one-click approval.
+          </p>
+          <div class="solution-impact" aria-label="Business impact">
+            <span class="solution-impact-icon" aria-hidden="true">◆</span>
+            <span class="solution-impact-text">
+              Protects your brand's reputation at scale — without hiring a social media manager.
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="solution-card reveal reveal-delay-2" id="solution-reengagement" aria-labelledby="solution-3-title">
+          <span class="solution-tag">Repeat Revenue</span>
+          <h3 class="solution-title" id="solution-3-title">
+            Hyper-Personalised Customer Re-engagement Engine
+          </h3>
+          <div class="solution-section-label">The Bottleneck</div>
+          <p class="solution-body">
+            You're sitting on a goldmine of past customer data but only sending generic promotional 
+            blasts that get ignored. Low open rates, low conversions, high unsubscribes.
+          </p>
+          <div class="solution-section-label">The AI Solution</div>
+          <p class="solution-body">
+            An AI tool that segments your customer database and automatically drafts highly personalised 
+            SMS or email campaigns based on past purchase behaviour — 
+            <em>"Hey Priya, it's been 3 months since you bought [Product X]. Ready for a refill?"</em>
+          </p>
+          <div class="solution-impact" aria-label="Business impact">
+            <span class="solution-impact-icon" aria-hidden="true">◆</span>
+            <span class="solution-impact-text">
+              Drives repeat business with zero extra effort from you. Your data, finally working for you.
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PROCESS
+  ══════════════════════════════════ -->
+  <section id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="process-layout">
+
+        <div class="process-left">
+          <div class="section-eyebrow reveal">
+            <span class="section-eyebrow-line" aria-hidden="true"></span>
+            <span class="section-eyebrow-text">How We Work</span>
+          </div>
+          <h2 class="section-title reveal" id="process-heading">
+            From first meeting<br>to full ownership.
+          </h2>
+          <p class="section-sub reveal">
+            A deliberate, no-nonsense process designed to move fast, waste nothing, 
+            and leave you with something that works long after we're gone.
+          </p>
+        </div>
+
+        <div class="process-steps" role="list">
+          <div class="process-step reveal" role="listitem">
+            <span class="process-step-num" aria-hidden="true">01</span>
+            <div class="process-step-content">
+              <div class="process-step-title">Discovery &amp; Audit</div>
+              <p class="process-step-text">
+                We spend week one observing your business — your workflows, bottlenecks, and 
+                revenue drivers. We map every opportunity where AI creates measurable impact and 
+                quantify it in terms of time, money, and mental load.
+              </p>
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="glass p-8 rounded-2xl text-center">
-                    <h3 class="text-4xl font-bold gradient-text mb-2">AI</h3>
-                    <p class="text-sm text-gray-500 uppercase">Adoption</p>
-                </div>
-                <div class="glass p-8 rounded-2xl text-center">
-                    <h3 class="text-4xl font-bold gradient-text mb-2">10X</h3>
-                    <p class="text-sm text-gray-500 uppercase">Efficiency</p>
-                </div>
+          </div>
+          <div class="process-step reveal reveal-delay-1" role="listitem">
+            <span class="process-step-num" aria-hidden="true">02</span>
+            <div class="process-step-content">
+              <div class="process-step-title">Prioritise Together</div>
+              <p class="process-step-text">
+                We present our findings and agree on which solutions to build first — 
+                prioritised by ROI, not complexity. No decisions are made without you.
+              </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-24 bg-[#0a0a0a] px-6 md:px-24">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Our Expertise</h2>
-            <p class="text-gray-500">End-to-end technology transformation.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition cursor-default">
-                <i class="fas fa-robot text-3xl text-blue-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">AI Implementation</h3>
-                <p class="text-gray-400 text-sm">Automating repetitive tasks and customer support using LLMs and custom AI agents.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-2" role="listitem">
+            <span class="process-step-num" aria-hidden="true">03</span>
+            <div class="process-step-content">
+              <div class="process-step-title">Build &amp; Integrate</div>
+              <p class="process-step-text">
+                We build lean, purpose-specific systems that integrate with what you already use. 
+                No bloated platforms, no unnecessary subscriptions. Just what works.
+              </p>
             </div>
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition cursor-default">
-                <i class="fas fa-chart-line text-3xl text-blue-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Revenue Growth</h3>
-                <p class="text-gray-400 text-sm">Using data analytics to identify bottlenecks and unlock new revenue streams.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step-num" aria-hidden="true">04</span>
+            <div class="process-step-content">
+              <div class="process-step-title">Deliver &amp; Exit</div>
+              <p class="process-step-text">
+                We hand over complete ownership with full documentation and a walkthrough. 
+                The system is yours — built to run for years without needing us again.
+              </p>
             </div>
-            <div class="glass p-10 rounded-3xl hover:border-blue-500/50 transition cursor-default">
-                <i class="fas fa-code text-3xl text-blue-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Tech Stack Audit</h3>
-                <p class="text-gray-400 text-sm">Modernizing your infrastructure to be future-proof and cost-effective.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CONTACT
+  ══════════════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <div class="section-eyebrow reveal">
+            <span class="section-eyebrow-line" aria-hidden="true"></span>
+            <span class="section-eyebrow-text">Get in Touch</span>
+          </div>
+          <h2 class="section-title reveal" id="contact-heading">
+            Let's find where AI<br>moves the needle<br>for your business.
+          </h2>
+          <p class="section-sub reveal" style="margin-bottom: 0;">
+            No sales pitch. No commitment. Just an honest conversation about 
+            where your biggest opportunities are.
+          </p>
+          <div class="contact-detail reveal">
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value">
+              <a href="mailto:arborops.tech@gmail.com" id="contact-email-link">arborops.tech@gmail.com</a>
             </div>
+          </div>
+          <div class="contact-note reveal">
+            <div class="contact-note-title">Discovery Week</div>
+            <p class="contact-note-text">
+              Our first week together is purely observational. We come to you, study your operations, 
+              and return with a clear picture of what AI can do for your revenue — before we charge you anything.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Testimonials (Placeholder) -->
-    <section id="testimonials" class="py-24 px-6 md:px-24 text-center">
-        <h2 class="text-3xl font-bold mb-12 italic text-gray-400">"Helping businesses move at the speed of thought."</h2>
-        <div class="max-w-4xl mx-auto glass p-12 rounded-3xl border-dashed">
-            <p class="text-gray-500">Future Success Stories will be featured here.</p>
-            <p class="mt-4 text-sm font-semibold uppercase tracking-widest">— ARBOROPS CLIENTS</p>
+        <div class="contact-right">
+          <!-- Replace YOUR_FORMSPREE_ID below with your actual Formspree form ID -->
+          <!-- Sign up at formspree.io → Create Form → copy the ID (e.g. xblgrqka) -->
+          <form
+            id="contact-form"
+            class="contact-form reveal"
+            action="https://formspree.io/f/mnpqrolg"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="field-name">Full Name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="field-name"
+                  name="name"
+                  placeholder="Rajesh Kumar"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-email">Email</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="field-email"
+                  name="email"
+                  placeholder="rajesh@yourbusiness.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="field-business">Business Name &amp; Industry</label>
+              <input
+                class="form-input"
+                type="text"
+                id="field-business"
+                name="business"
+                placeholder="Kumar Foods — Restaurant Chain"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="field-message">What's your biggest operational headache?</label>
+              <textarea
+                class="form-input"
+                id="field-message"
+                name="message"
+                rows="5"
+                placeholder="Describe the problem or process that costs you the most time or money…"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form-submit" id="form-submit">
+              Send Enquiry
+            </button>
+
+            <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+          </form>
         </div>
-    </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="py-24 px-6 md:px-24 relative overflow-hidden">
-        <div class="max-w-xl mx-auto glass p-10 rounded-3xl relative z-10">
-            <h2 class="text-3xl font-bold mb-2">Let's Talk.</h2>
-            <p class="text-gray-400 mb-8">arborops.tech@gmail.com</p>
-            
-            <form id="contactForm" class="space-y-4">
-                <input type="text" id="name" placeholder="Your Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500">
-                <input type="email" id="email" placeholder="Your Email" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500">
-                <textarea id="message" rows="4" placeholder="How can we help grow your revenue?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-blue-500"></textarea>
-                <button type="submit" id="submitBtn" class="w-full bg-blue-600 py-4 rounded-xl font-bold glow-button">Send Message</button>
-            </form>
-            <p id="responseMsg" class="mt-4 text-center hidden"></p>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-white/10 text-center text-gray-500 text-sm">
-        &copy; 2024 ARBOROPS PRIVATE LIMITED. All rights reserved.
-    </footer>
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">ArborOps</span>
+        <span class="footer-copy">&copy; 2025 ArborOps Private Limited. All rights reserved.</span>
+        <a href="mailto:arborops.tech@gmail.com" class="footer-email" id="footer-email-link">arborops.tech@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const msg = document.getElementById('responseMsg');
-            
-            btn.innerText = "Sending...";
-            btn.disabled = true;
+  <!-- Screenreader utility -->
+  <style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }</style>
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            try {
-                // Warning: API Key is exposed in frontend. Best used with a private repository or a backend proxy.
-                const response = await fetch('https://api.resend.com/emails', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': 'Bearer re_NaGjaSnL_5YXMzGgLqsrJ4wGnrGh4MG2X',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        from: 'Arborops Web <onboarding@resend.dev>',
-                        to: 'arborops.tech@gmail.com',
-                        subject: `New Lead: ${name}`,
-                        html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`
-                    })
-                });
-
-                if (response.ok) {
-                    msg.innerText = "Success! We'll be in touch.";
-                    msg.className = "mt-4 text-center text-green-400 block";
-                    document.getElementById('contactForm').reset();
-                } else {
-                    throw new Error();
-                }
-            } catch (error) {
-                msg.innerText = "Check Console (CORS issue likely). Use Formspree for static sites.";
-                msg.className = "mt-4 text-center text-red-400 block";
-            }
-            btn.innerText = "Send Message";
-            btn.disabled = false;
-        });
-    </script>
+  <script src="main.js" defer></script>
 </body>
 </html>
