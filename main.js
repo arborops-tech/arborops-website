@@ -21,8 +21,6 @@ function onScroll() {
   updateBackToTop();
 }
 window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
-
 // ── Active nav link tracking ──
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section[id], article[id]');
@@ -173,3 +171,6 @@ form.addEventListener('submit', async (e) => {
   submitBtn.disabled = false;
   submitBtn.textContent = 'Send Enquiry';
 });
+
+// Initialise scroll state after all vars are defined
+onScroll();
